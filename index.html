@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CSS Website Layout</title>
+<title>Rafael Becerril Arreola, personal website</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -267,10 +267,10 @@ smalltext {
 /* Style the footer */
 .footer {
     background: #20123e;
-    background: -webkit-linear-gradient(to bottom, #fee8d4, #5ed8de 80%);
-    background: linear-gradient(to bottom, #eebfbf, #fed8d4 80%); 
+    background: -webkit-linear-gradient(to bottom, #f2f2f2, #000000 100%);
+    background: linear-gradient(to bottom, #f2f2f2, #000000 100%); 
 	padding: 10px;
-  	text-align: center;
+/*  	text-align: center;*/
 }
 
 
@@ -423,53 +423,6 @@ input[type=submit]:hover {
 
 </script>
 
-
-<?php
-// define variables and set to empty values
-$nameErr = $emailErr = "";
-$name = $email = $comment = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
-  } else {
-    $name = test_input($_POST["name"]);
-    // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed";
-    }
-  }
-  
-  if (empty($_POST["email"])) {
-    $emailErr = "Email is required";
-  } else {
-    $email = test_input($_POST["email"]);
-    // check if e-mail address is well-formed
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $emailErr = "Invalid email format";
-    }
-  }
-    
-  if (empty($_POST["comment"])) {
-    $comment = "";
-  } else {
-    $comment = test_input($_POST["comment"]);
-  }
-  
-  // Always set content-type when sending HTML email
-  $headers = "MIME-Version: 1.0" . "\r\n";
-  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-  $headers .= 'From: ' . $email . "\r\n";
-  mail("becerrilrafael@gmail.com","email from personal site",$comment,$headers );
-}
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-?>
 
 
 
@@ -641,7 +594,7 @@ for (i = 0; i < acc.length; i++) {
 }
 </script>
 
-<BR CLEAR=”left” /> 
+<BR CLEAR=â€leftâ€ /> 
 <div style="width:95%; left:20px; position:relative">
 <p style="font-weight: bold">Working papers and preprints available from:</p>
  <table style="width:100%;">
@@ -670,7 +623,7 @@ for (i = 0; i < acc.length; i++) {
 
 
 <!-- <img src="jc penny 2.gif" alt="Lights" width="95%" style="margin: 0px 20px 10px 20px; display: inline-block"> -->
-<BR CLEAR=”left” /> 
+<BR CLEAR=â€leftâ€ /> 
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 
@@ -776,12 +729,14 @@ for (i = 0; i < acc.length; i++) {
     </div>
    </div>
 </div> 
-<br><br><br><br><br><br><br><br><br><br>  
+ 
 
       
 <div class="footer">
   <div style="text-align:left">
-    <p>Built by Rafael. </p>
+  <br><br><br><br><br>
+      <p>Built by Rafael. </p>
+    <br><br><br><br><br> 
   </div>
 </div>      
 
