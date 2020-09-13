@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* Style The Dropdown Button */
+.dropbtn {
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  
+    max-width: 50px;
+    width: 100px;
+    position: fixed;
+    background: none;
+    top: 30px;
+    right: 40px;
+    mix-blend-mode: difference;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: fixed;
+  display: inline-block;
+  right: 40px;
+  top: 60px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: fixed;
+  right: 40px;
+  top: 60px;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 16px 32px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #aa0000}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropbtn:hover, .dropdown:hover .dropbtn {
+/* background-color: #000000; */
+ background: none;
+}
+
+
+/* ----- Browser Support ----- */
+
+
+/* Display mix-blend-mode button for all browsers */
+.light-svg {
+    display: block;
+}
+.dark-svg {
+    display: none;
+}
+
+/* Change button class (and SVG color) for IE and Edge only */
+_:-ms-lang(x), .light-svg {
+    display: none;
+}
+_:-ms-lang(x), .dark-svg {
+    display: block;
+}
+
+
+
+/* ----- Unrelated ----- */
+
+body {
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 100;
+}
+
+.overview {
+    border-radius: 10px;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.responsive_pic {
+  width: 100%;
+  max-width: 175px;
+  height: auto;
+}
+
+
+h1 {
+    font-weight: 900;
+    /*font-size: 2.5em;*/
+    color: #000000;
+    font-size:4vw;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 2em;
+    color: #aa0000;
+    padding: 0px 10px;
+}
+
+h3 {
+    font-weight: 900;
+    font-size: 1.5em;
+    color: #000000;
+}
+
+p { 
+    max-width: 1000px;
+    font-weight: 100;
+    line-height: 1.5em;
+}
+
+a {
+    color: #000;
+/*    font-weight: bold;*/
+}
+
+a[role="button"] {
+    background: #dd3b42;
+    color: #FFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    margin: 10px 0 0 -5px;
+    display: inline-block;
+}
+
+
+.highlight {
+    background: rgba(217, 55, 10, 0.3);
+    padding: 0px 5px;
+ /*   margin: 0 -10px; */
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+smalltext {
+    background: rgba(217, 55, 10, 0.3);
+    padding: 0px 5px;
+    font-size: 0.75em;
+}
+
+.header {
+    padding: 10px 40px;
+    background-size: cover;
+    margin: 0;
+    min-height: 80px; 
+        
+	text-align: center;
+	background: #FFFFFF;
+/*    background: #34495e;
+    background: -webkit-linear-gradient(to bottom, #34495e, #34495e, #566b7f 90%);
+    background: linear-gradient(to bottom, #34495e,  #34495e, #566b7f  90%); */
+}
+
+/* The navbar container */
+.topnav {
+  overflow: hidden;
+/*  background-color: #850000; */
+  background-color: #000000;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: #aa0000;
+  color: #eee;
+}
+
+
+.columnThinL {
+  float: left;
+  width: 20%;
+  max-width: 200px;
+  padding: 10px;
+  left: 0;
+}
+
+.columnThinR {
+  float: left;	
+  width: 20%;
+  max-width: 200px;	
+  padding: 10px;
+  right: 0;  
+}
+
+.columnFlex {
+ float: left;
+/*  max-width: 400px;	*/
+  padding-top: 0px; 
+  padding-bottom: 0px; 
+  max-width: 60%;
+  padding-left: 25px;
+  padding-right: 25px;   
+}
+
+.columnThird {
+  float: left;
+  width: 30%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media screen and (max-width: 600px) {
+  .columnThird {
+    width: 100%;
+  }
+  .columnThinR {
+	width: 100%;
+  }
+  .columnThinL{
+	width: 100%;	  
+  }
+}
+
+
+/* Style the footer */
+.footer {
+    background: #20123e;
+    background: -webkit-linear-gradient(to bottom, #fee8d4, #5ed8de 80%);
+    background: linear-gradient(to bottom, #eebfbf, #fed8d4 80%); 
+	padding: 10px;
+  	text-align: center;
+}
+
+
+/* ----------- accordion ------------- */
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 95%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  position: relative;
+  left: 20px;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 20px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 25px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+/*  position: fixed;
+  left: 30px; */
+  width: 100%;  
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #aa0000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #bb0000;
+}
+
+/* Style the container/contact section */
+.contactcontainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.contactcolumn {
+  float: left;
+  width: 50%;
+  margin-top: 0px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .contactcolumn, input[type=submit] {
+    width: 90%;
+    margin-top: 0;
+  }
+}
+
+
+</style>
+
+
+
+<script src="jquery.min.js"></script>
+
+<script>
+(function($){
+    $.fn.extend({ 
+        rotaterator: function(options) {
+ 
+            var defaults = {
+                fadeSpeed: 500,
+                pauseSpeed: 100,
+				child:null
+            };
+             
+            var options = $.extend(defaults, options);
+         
+            return this.each(function() {
+                  var o =options;
+                  var obj = $(this);                
+                  var items = $(obj.children(), obj);
+				  items.each(function() {$(this).hide();})
+				  if(!o.child){var next = $(obj).children(':first');
+				  }else{var next = o.child;
+				  }
+				  $(next).fadeIn(o.fadeSpeed, function() {
+						$(next).delay(o.pauseSpeed).fadeOut(o.fadeSpeed, function() {
+							var next = $(this).next();
+							if (next.length == 0){
+									next = $(obj).children(':first');
+							}
+							$(obj).rotaterator({child : next, fadeSpeed : o.fadeSpeed, pauseSpeed : o.pauseSpeed});
+						})
+					});
+            });
+        }
+    });
+})(jQuery);
+
+ $(document).ready(function() {
+        $('#rotate').rotaterator({fadeSpeed:2000, pauseSpeed:100});
+ });
+
+</script>
+
+
+<?php
+// define variables and set to empty values
+$nameErr = $emailErr = "";
+$name = $email = $comment = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed";
+    }
+  }
+  
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format";
+    }
+  }
+    
+  if (empty($_POST["comment"])) {
+    $comment = "";
+  } else {
+    $comment = test_input($_POST["comment"]);
+  }
+  
+  // Always set content-type when sending HTML email
+  $headers = "MIME-Version: 1.0" . "\r\n";
+  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+  $headers .= 'From: ' . $email . "\r\n";
+  mail("becerrilrafael@gmail.com","email from personal site",$comment,$headers );
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+
+
+
+</head>
+<body>
+
+<a name="Home"></a>
+
+<div class="header">
+ <br>
+  <h1 style="margin: 0 0px;" >Rafael Becerril Arreola</h1> 
+  <div id="rotate"> <div>Consumer Markets Specialist</div> <div>Analytics Educator</div> <div> Quant and Computer Engineer</div>  </div> 
+ <!-- Uncovering the economic effects of socioeconomic and technological change
+  with advance data analytics -->
+</div>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="topnav">
+  <a href="#Home"><i class="fa fa-fw fa-home"></i>Home</a>
+  <a href="#Projects"><i class="fa fa-fw fa-cogs"></i>Projects</a>
+  <a href="#Contribution"><i class="fa fa-fw fa-balance-scale"></i>Contribution</a>  
+  <a href="#About"><i class="fa fa-fw fa-id-card-o"></i>About</a>
+  <a href="#Contact"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+</div>
+
+
+<div class="row">
+  <div class="columnThinL">
+  <img src="Rafael Becerril.gif" alt="Portrait" style="margin: 10px 10px 10px 0px;" class="responsive_pic">
+  <!--<p style="text-align: center;"> My name is Rafael, my last names are Becerril and Arreola </p> -->
+  </div>
+
+   <div class="columnFlex" >
+   <p>My current position is Assistant Professor of Marketing at the University of South Carolina.</p>
+   <!-- <p class="highlight"> -->
+   <p style="font-weight:bold; color: #aa0000; text-align: center; background: #dddddd;  border-radius: 5px;">
+     I combine advanced data-analysis, social science, and engineering tools to
+     answer challenging and socially-relevant research questions about consumer markets.
+   </p>
+	
+	<p>
+	My research focuses on the effects of social and socieconomic processes on consumer markets.
+	Most of this work lies in the intersection of marketing, operations management, and 
+	economics, mostly in the contexts of retailing (both offline and online), 
+	consumer packaged goods, and durable goods.  
+	</p>
+	    <table style="width:100%; padding:0 0 0 0px">
+  		<tr> 
+  		   	<td style="vertical-align:top; text-align:right; font-style: italic;">UCLA Ph.D.</td>
+    		<td>Quantitative Marketing</td>
+    	</tr> <tr></tr>  <tr></tr>
+		<tr> 
+  		   	<td style="vertical-align:top; text-align:right; font-style: italic;">University of Toronto M.A.Sc.</td> <td>Control Theory and Automation</td>
+    	</tr>  <tr></tr>  <tr></tr>
+		<tr> 
+			<td style="vertical-align:top;  text-align:right; font-style: italic;">ITESM B.Sc.</td> <td>Electrical and Computer Engineering</td>
+		</tr>
+	</table>
+  </div>
+
+  	
+  <div class="columnThinR">
+    <p style="text-align:center; margin: 5px 0px 0px 0px;">I cultivate the three pilars of data science:</p>
+    <img src="diagrama.svg" alt="The three pilars of data science" width="100%" style="margin: 10px 0px 0px 0px;">
+  </div>
+</div>  
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+<!--<section style="max-width:600px"> -->
+<a name="Projects"><h2>Projects</h2></a>
+
+<button class="accordion">Social stratification and consumer markets</button>
+<div class="panel">
+<img src="new_improved_286.png" alt="Lights" width="200" ALIGN="left" style="margin: 20px 10px 0px 0px;">
+<p dir="ltr" style="text-align: left;" role="presentation"> 
+Changes in the distribution of income are reshaping markets, leading consumers to adjust their consumption according to
+their new leves of purchasing power. 
+This in turns leads manufacturers and retailers of consumer products to change their 
+products and their assortments.</p>
+
+<p dir="ltr" style="text-align: left;" role="presentation"> 
+In a first project, my coauthors and I analyzed seven years of sales of consumer packaged goods across 944 product categories and across the U.S. to find that increasing income inequality leads to smaller assortments in the mainstream grocery channel. 
+We investigate three potential demand explanations and find that the effect is mostly the result of the income losses of the middle income households (consistent with Engel's Law of quantity).
+</p>
+
+<p dir="ltr" style="text-align: left;" role="presentation" >
+In a second project, my coauthors and I investigate the welfare effects of product premiumization when it involves the delisting of mainstream products to make room for higher-end, higher margin products.</p>
+
+<p dir="ltr" style="text-align: left;" role="presentation" >Collaborators:</p>
+<ul style="padding: 0px; list-style-type: square; margin-left: 0px; margin-right: 0px;">
+<li dir="ltr" style="margin-left: 15pt;"><p dir="ltr" style="margin-left: 0pt;text-indent: 0pt;text-align: left;padding-left:0pt;" role="presentation"><span role="link"><span style="text-decoration:underline;" data-ri="0">Randy E. Bucklin</span></span><span style="" data-ri="1">, UCLA Anderson School of Management</span></p></li><li dir="ltr" style="margin-left: 15pt;" ><p dir="ltr" style="margin-left: 0pt;text-indent: 0pt;text-align: left;padding-left:0pt;" role="presentation" ><span role="link" ><span style="text-decoration:underline;"  data-ri="0">Raphael Thomadsen</span></span><span style="" data-ri="1">, Olin Business School, Washington University in St. Louis</span></p></li><li dir="ltr" style="margin-left: 15pt;"><p dir="ltr" style="margin-left: 0pt;text-indent: 0pt;text-align: left;padding-left:0pt;" role="presentation"><span role="link"><span style="text-decoration:underline;" data-ri="0">Nitin Mehta</span></span><span style="" data-ri="1">, Rotman School of Management, University of Toronto</span></p></li></ul>
+</div>
+
+
+<button class="accordion">Claiming social rank through consumption</button>
+<div class="panel">
+<img src="lambo_rolex_smaller286.png" alt="Lights" width="200" ALIGN="left" style="margin: 20px 10px 0px 0px;">
+<p dir="ltr" style="text-align: left;" role="presentation"> 
+An important effect of socioeconomic and technological change on consumer markets happens through social processes. Socioeconomic and technological changes transform the way people communicate and how they interact and this impacts their consumption. </p> 
+
+<p dir="ltr" style="text-align: left;" role="presentation"> In a first study, my coauthor and I propose a method to quantify how much households use different product categories to signal wealth using expenditure data. </p>
+
+<p dir="ltr" style="text-align: left;" role="presentation"> In a second study, I quantify the wealth-signaling effects of prices, finding that they are significantly larger than previously measured effects of positional concerns. I also find that consumers often counter-signal wealth to be perceived as warm instead of competent.</p>
+
+<p dir="ltr" style="text-align: left;" role="presentation" class="zfr3Q theme_block_Paragraph"><span style="" data-ri="0">Collaborators:</span></p><ul style="padding: 0px; list-style-type: square; margin-left: 0px; margin-right: 0px;" class="n8H08c UVNKR"><li dir="ltr" style="margin-left: 15pt;" class="zfr3Q TYR86d eD0Rn"><p dir="ltr" style="margin-left: 0pt;text-indent: 0pt;text-align: left;padding-left:0pt;" role="presentation" class="zfr3Q theme_block_Paragraph"><span role="link" class="I4aHG"><span style="text-decoration:underline;" class="aw5Odc" data-ri="0">Dominique M. Hanssens</span></span><span style="" data-ri="1">, UCLA Anderson School of Management</span></p></li></ul>
+</div>
+
+<button class="accordion">Socioeconomic and social processes in the digital economy</button>
+<div class="panel">
+<img src="Package-from-Phone_286.png" alt="Lights" width="200" ALIGN="left" style="margin: 20px 10px 0px 0px;">
+
+<p dir="ltr" style="text-align: left;" role="presentation"> 
+In online markets as well, socioeconomic and technological changes transform what consumers can afford as well as the way people inform their choices. </p> 
+
+<p dir="ltr" style="text-align: left;" role="presentation" class="zfr3Q theme_block_Paragraph">In a first study, my coauthor and I look into what determines the profitability of contingent free shipping offerings (free shipping for orders above a certain dollar amount). We find that, among all shipping-related costs, the fixed shipping fees may have the largest impact. In addition, retailer profits are higher the less heterogeneous consumer budgets are. One can thus expect increasing polarization of markets to reduce the profitability of online markets because of the cost of delivery.</p>
+
+<p dir="ltr" style="text-align: left;" role="presentation" class="zfr3Q theme_block_Paragraph">In a second study, we show extend the results to include inventory decisions and find that: (i) a reduction of the profit margin does not significantly affect the standard deviation of consumers' order sizes but increases the average order size; and (ii) variations in the free-shipping-qualifying order size affect both the average value and the standard deviation of the order sizes.&nbsp;&nbsp;</p>
+
+<p dir="ltr" style="text-align: left;" role="presentation" class="zfr3Q theme_block_Paragraph">In a third study, my coauthors and I investigate the importance of consumer interactions through ratings. In particular, we study the value of publishing customer delivery ratings in online market places and find that the strategy is profitable as long as ratings are not very elastic to delivery efforts. Analyzing a large sample of transactions provided by Cainiao, we find evidence that this is the case for T-mall (one of the leading marketplaces in China).</p>
+
+<p dir="ltr" style="text-align: left;" role="presentation" class="zfr3Q theme_block_Paragraph"><span style="" data-ri="0">Collaborators:</span></p><ul style="padding: 0px; list-style-type: square; margin-left: 0px; margin-right: 0px;" class="n8H08c UVNKR"><li dir="ltr" style="margin-left: 15pt;" class="zfr3Q TYR86d eD0Rn"><p dir="ltr" style="margin-left: 0pt;text-indent: 0pt;text-align: left;padding-left:0pt;" role="presentation" class="zfr3Q theme_block_Paragraph"><span role="link" class="I4aHG"><span style="text-decoration:underline;" class="aw5Odc" data-ri="0">Mingming Leng</span></span><span style="" data-ri="1">, Faculty of Business, Lingnan University</span></p></li><li dir="ltr" style="margin-left: 15pt;" class="zfr3Q TYR86d eD0Rn"><p dir="ltr" style="margin-left: 0pt;text-indent: 0pt;text-align: left;padding-left:0pt;" role="presentation" class="zfr3Q theme_block_Paragraph"><span role="link" class="I4aHG"><span style="text-decoration:underline;" class="aw5Odc" data-ri="0">Mahmut Parlar</span></span><span style="" data-ri="1">, DeGroote School of Business, McMaster University</span></p></li><li dir="ltr" style="margin-left: 15pt;" class="zfr3Q TYR86d eD0Rn"><p dir="ltr" style="margin-left: 0pt;text-indent: 0pt;text-align: left;padding-left:0pt;" role="presentation" class="zfr3Q theme_block_Paragraph"><span role="link" class="I4aHG"><span style="text-decoration:underline;" class="aw5Odc" data-ri="0">Mark Ferguson</span></span><span style="" data-ri="1">, Darla Moore School of Business, University of South Carolina</span></p></li></ul></div><div jsname="LwH6nd" class="n5vXWb" style="display:none"><p class="zfr3Q" jsname="D8QWve">Click to edit text</p></div><div jsname="t8SdHb" jscontroller="BYrVPe" jsaction="mousedown:npT2md(preventDefault=true);qUuEUd:npT2md;"></div>
+</div>
+
+<button class="accordion">Projects on other topics</button>
+<div class="panel">
+<img src="car-service.png" alt="Service quality" width="200" ALIGN="left" style="margin: 20px 10px 0px 0px;">
+<p dir="ltr" style="text-align: left;" role="presentation" class="zfr3Q theme_block_Paragraph">Manufacturers and retailers often partner to offer hybrid goods (combinations of products and services), but this may generate tension between partners when post-purchase services are managed by retailers because different aspects of service may benefit manufacturers and retailers differently. We study how the market shares of new vehicles and dealer services depend on consumer satisfaction with service facilities and services staff.</p>
+
+<p dir="ltr" style="text-align: left;" role="presentation" class="zfr3Q theme_block_Paragraph">We find that above-average satisfaction with staff boosts service shares but harms new vehicle shares. Above-average satisfaction with facilities hurts service shares. Moreover, these effects differ for mainstream and premium brands because (we conjecture) buyers of premium brands exhibit, on average, higher incomes and thus higher sensitivity to the time spent in having their vehicles serviced.</p>
+
+<p dir="ltr" style="text-align: left;" role="presentation" class="zfr3Q theme_block_Paragraph"><span style="" data-ri="0">Collaborators:</span></p><ul style="padding: 0px; list-style-type: square; margin-left: 0px; margin-right: 0px;" class="n8H08c UVNKR"><li dir="ltr" style="margin-left: 15pt;" class="zfr3Q TYR86d eD0Rn"><p dir="ltr" style="margin-left: 0pt;text-indent: 0pt;text-align: left;padding-left:0pt;" role="presentation" class="zfr3Q theme_block_Paragraph"><span role="link" class="I4aHG"><span style="text-decoration:underline;" class="aw5Odc" data-ri="0">Chen Zhou</span></span><span style="" data-ri="1">, Darla Moore School of Business, University of South Carolina</span></p></li><li dir="ltr" style="margin-left: 15pt;" class="zfr3Q TYR86d eD0Rn"><p dir="ltr" style="margin-left: 0pt;text-indent: 0pt;text-align: left;padding-left:0pt;" role="presentation" class="zfr3Q theme_block_Paragraph"><span role="link" class="I4aHG"><span style="text-decoration:underline;" class="aw5Odc" data-ri="0">Raji Srinivasan</span></span><span style="" data-ri="1">, McCombs School of Business, University of Texas Austin</span></p></li></ul>
+
+
+<img src="Malibu-vs-Camry.jpg" alt="Competitive reactions" width="200" ALIGN="left" style="margin: 0px 10px 0px 0px;">
+<p dir="ltr" style="text-align: left;" role="presentation" class="zfr3Q theme_block_Paragraph">Do business firms benefit from promoting their products after a competitor suffers a major product recall? While some managers believe such recalls are opportunities to steal market share, others fear promotions may tarnish their brands. My coauthors and I assess whether car makers responded to 2010's Toyota's recall with promotions, whether the responses were effective, and whether the effectiveness varied across brand tiers.</p>
+
+<p dir="ltr" style="text-align: left;" role="presentation" class="zfr3Q theme_block_Paragraph">We find that the Toyota recalls induced competitive promotions of approximately $850 on average. While 50% of premium brands increased promotions, only 36% of nonpremium brands did so. Among premium brands, 86% benefited from the promotional reactions but the returns for most nonpremium brands were nonsignificant or even negative.</p>
+
+<p dir="ltr" style="text-align: left;" role="presentation" class="zfr3Q theme_block_Paragraph"><span style="" data-ri="0">Collaborators:</span></p><ul style="padding: 0px; list-style-type: square; margin-left: 0px; margin-right: 0px;" class="n8H08c UVNKR"><li dir="ltr" style="margin-left: 15pt;" class="zfr3Q TYR86d eD0Rn"><p dir="ltr" style="margin-left: 0pt;text-indent: 0pt;text-align: left;padding-left:0pt;" role="presentation" class="zfr3Q theme_block_Paragraph"><span role="link" class="I4aHG"><span style="text-decoration:underline;" class="aw5Odc" data-ri="0">Chen Zhou</span></span><span style="" data-ri="1">, Darla Moore School of Business, University of South Carolina</span></p></li><li dir="ltr" style="margin-left: 15pt;" class="zfr3Q TYR86d eD0Rn"><p dir="ltr" style="margin-left: 0pt;text-indent: 0pt;text-align: left;padding-left:0pt;" role="presentation" class="zfr3Q theme_block_Paragraph"><span role="link" class="I4aHG"><span style="text-decoration:underline;" class="aw5Odc" data-ri="0">Hari Sridhar</span></span><span style="" data-ri="1">, Mays School of Business, Texas A&amp;M University</span></p></li><li dir="ltr" style="margin-left: 15pt;" class="zfr3Q TYR86d eD0Rn"><p dir="ltr" style="margin-left: 0pt;text-indent: 0pt;text-align: left;padding-left:0pt;" role="presentation" class="zfr3Q theme_block_Paragraph"><span role="link" class="I4aHG"><span style="text-decoration:underline;" class="aw5Odc" data-ri="0">Tony H. Cui</span></span><span style="" data-ri="1">, Carlson School of Management, University of Minnesota</span></p></li><li dir="ltr" style="margin-left: 15pt;" class="zfr3Q TYR86d eD0Rn"><p dir="ltr" style="margin-left: 0pt;text-indent: 0pt;text-align: left;padding-left:0pt;" role="presentation" class="zfr3Q theme_block_Paragraph"><span role="link" class="I4aHG"><span style="text-decoration:underline;" class="aw5Odc" data-ri="0">Yan Dong</span></span><span style="" data-ri="1">, Darla Moore School of Business, University of South Carolina</span></p></li></ul>
+
+<img src="blockchain.png" alt="Blockchain" width="200" ALIGN="left" style="margin: 0px 10px 0px 0px;">
+<p dir="ltr" style="text-align: left;" role="presentation" class="zfr3Q theme_block_Paragraph">Profiting from my background in engineering, I work with my coauthors to study the implications of new technologies for markets and businesses. We review current studies and propose a framework for the research and implementation of blockchain.</p>
+
+<p dir="ltr" style="text-align: left;" role="presentation" class="zfr3Q theme_block_Paragraph">Collaborators:</p><ul style="padding: 0px; list-style-type: square; margin-left: 0px; margin-right: 0px;" class="n8H08c UVNKR"><li dir="ltr" style="margin-left: 15pt;" class="zfr3Q TYR86d eD0Rn"><p dir="ltr" style="margin-left: 0pt;text-indent: 0pt;text-align: left;padding-left:0pt;" role="presentation" class="zfr3Q theme_block_Paragraph"><span role="link" class="I4aHG"><span style="text-decoration:underline;" class="aw5Odc" data-ri="0">Yong Tang</span></span><span style="" data-ri="1">, School of Computer Science and Engineering, University of Electronic Science and Technology of China</span></p></li><li dir="ltr" style="margin-left: 15pt;" class="zfr3Q TYR86d eD0Rn"><p dir="ltr" style="margin-left: 0pt;text-indent: 0pt;text-align: left;padding-left:0pt;" role="presentation" class="zfr3Q theme_block_Paragraph"><span role="link" class="I4aHG"><span style="text-decoration:underline;" class="aw5Odc" data-ri="0">Jason Xion</span></span><span style="" data-ri="1">, Walker College of Business, Appalachian State University</span></p></li><li dir="ltr" style="margin-left: 15pt;" class="zfr3Q TYR86d eD0Rn"><p dir="ltr" style="margin-left: 0pt;text-indent: 0pt;text-align: left;padding-left:0pt;" role="presentation" class="zfr3Q theme_block_Paragraph"><span role="link" class="I4aHG"><span style="text-decoration:underline;" class="aw5Odc" data-ri="0">Lakshmi Iyer</span></span><span style="" data-ri="1">, Walker College of Business, Appalachian State University</span></p></li></ul><p dir="ltr" style="text-align: left;" role="presentation" class="zfr3Q theme_block_Paragraph"><br class="" style="" data-ri="0"></p></div><div jsname="LwH6nd" class="n5vXWb" style="display:none"><p class="zfr3Q" jsname="D8QWve">Click to edit text</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+<BR CLEAR=”left” /> 
+<div style="width:95%; left:20px; position:relative">
+<p style="font-weight: bold">Working papers and preprints available from:</p>
+ <table style="width:100%;">
+  <tr>
+    <td>
+<a href="https://sc.edu/study/colleges_schools/moore/directory/becerrilarreola_rafael.php">DMSB profile page</a>
+</td>
+    <td>
+<a href="https://scholar.google.com/citations?hl=en&amp;user=-VgCB18AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">google scholar profile</a>
+</td>
+  </tr>
+  <tr>
+    <td> <a href="https://www.researchgate.net/profile/Rafael_Becerril_Arreola">ResearchGate page</a>
+</td>
+    <td> <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1767133">SSRN profile</a>
+</td>
+  </tr>
+  <tr>
+    <td> <a href="https://rbecerril.github.io/CV">CV</a>
+</td>
+    <td> <a href="https://orcid.org/0000-0002-7271-3638">OCRID profile</a>
+</td>
+  </tr>
+</table> 
+</div>
+
+
+<!-- <img src="jc penny 2.gif" alt="Lights" width="95%" style="margin: 0px 20px 10px 20px; display: inline-block"> -->
+<BR CLEAR=”left” /> 
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+
+
+<a name="Contribution"><h2>Contribution</h2></a>
+<div class="row">
+  <div class="columnThird">
+    <h3>Research</h3>
+    <p>I work on proyects that are relevant to businesses, consumers, and policy makers.
+    In particular, my proyects lay the foundations for the evaluation of managerial decisions and consumer decisions in terms of consumer welfare and business profitability.</p>
+    <p>My hope is to generate new knowledge to support the improvement of consumer welfare, businesses profitability, and the planet's health. </p>
+    
+   </div>
+  
+  <div class="columnThird">
+    <h3>Teaching</h3>
+    
+    
+    <p>I teach data graduate and undergraduate courses on business analytics and data science, 
+    with an emphasis on industry's best practices.
+    I advocate for a think-then-do approach.</p> 
+    
+        <blockquote><i>"Every Battle Is Won Before It Is Ever Fought (Sun Tzu)."</i></blockquote>
+    
+    <p>My students also learn how to identify biases and to take into consideration the 
+    potential social and business byproducts of data-based solutions.
+    </p>
+    
+    <p>I believe that a thorough understanding of data and methods can accomplish data-driven competitive advantage 
+    while minimizing the risks of data-based decision making.  </p>
+  </div>
+  
+  <div class="columnThird">
+    <h3>Service</h3>
+    <p>Involvement in multiple committees have allowed me to contribute to my workplace at multiple levels. 
+    Mostly, I serve in initiatives related to analytics, computing, and the training of PhD students.
+    </p>
+    
+    <p>
+    More broadly, I serve as a reviewer for multiple journals in Marketing, Operations, Information Systems, 
+    Transportation, and Computer Science. </p>
+  </div>
+</div>
+
+
+
+<br><br><br><br><br><br><br><br><br><br>     
+
+<a name="About"><h2>About</h2></a>
+
+
+<div class="row">
+
+  <div class="columnThird">
+	<p>
+	My keen interest in mathematics and computers led me through years of solid training in electrical engineering and control theory (applied mathematics). At the same time I discovered the beauty of the social sciences and became an avid learner of economics, psychology, and sociology. 
+	The formal training process culminated with my Ph.D. in quantitative marketing (economics and statistics), but the learning never ends.
+	</p>
+	
+
+  </div>
+
+  <div class="columnThird">
+  <p>Understanding human behavior fascinates me, and I enjoy reading about history, psychology, 
+   sociology, business, technology, and specially anything that puts them together. </p>
+   
+  <p> Some books I appreciate: <p>
+  <ul>
+  <li>Weapons of math destruction, by Cathy O'Neil</li>
+  <li>HBR Guide to Data Analytics Basics for Managers</li>
+  <li>Virtual Competition, by Ariel Ezrachi</li>
+  <li>Troublemakers, by Leslie Berlin</li>  
+  <li>Spent, by Geoffery Miller</li>  
+  <li>Darwin, Sex, and Status, by Jerome H. Barkow</li>  
+  </ul>
+  </div>
+  
+  <div class="columnThird">
+  <p> Where do I come from? </p>
+  <img src="places.png" alt="I've lived in..." width="100%" ALIGN="left" style="margin: 0px 0px 0px 0px;">
+  <p> Well, it is not that simple... </p>
+  </div>
+</div>  
+
+
+
+<br><br><br><br><br><br><br><br><br><br>     
+
+<a name="Contact"><h2>Contact</h2></a>
+
+ <div class="contactcontainer">
+<!--  <div style="text-align:center">
+    <p>Swing by for a cup of coffee, or leave a message:</p>
+  </div>-->
+  <div class="row">
+    <div class="contactcolumn">
+      <img src="Darla_Moore_School_of_Business.jpg" style="width:50%; float:right;">
+    </div>
+    <div class="contactcolumn">
+		<p>Darla Moore School of Business, Room 472 </p>      
+		<p>1014 Greene Street, Columbia SC </p>      
+		<p>rafael[dot]becerril[at]moore[dot]sc[dot]edu</p>
+    </div>
+   </div>
+</div> 
+<br><br><br><br><br><br><br><br><br><br>  
+
+      
+<div class="footer">
+  <div style="text-align:left">
+    <p>Built by Rafael. </p>
+  </div>
+</div>      
+
+
+
+
+<div class="dropdown">
+    <button id="primary-nav" class="dropbtn">
+               <svg class="light-svg" viewBox="0 0 612 344" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g stroke="none" stroke-width="1">
+                    <g fill-rule="nonzero" fill="#000000">
+                        <path d="M604.267,55.727 C608.524,55.727 612,52.083 612,47.994 L612,7.825 C612,3.569 608.717,0.092 604.267,0.092 L7.733,0.092 C3.477,0.092 0,3.736 0,7.825 L0,47.994 C0,52.25 3.283,55.727 7.733,55.727 L604.267,55.727 L604.267,55.727 Z" id="Shape"></path>
+                            <path d="M0,187.084 C0,191.34 3.283,194.817 7.733,194.817 L604.266,194.817 C608.522,194.817 611.999,191.172 611.999,187.084 L611.999,146.915 C611.999,142.631 608.716,139.182 604.266,139.182 L7.733,139.182 C3.477,139.182 0,142.827 0,146.915 L0,187.084 Z" id="Shape"></path>
+                            <path d="M0,326.175 C0,330.431 3.283,333.908 7.733,333.908 L604.266,333.908 C608.522,333.908 611.999,330.263 611.999,326.175 L611.999,286.006 C611.999,281.75 608.716,278.274 604.266,278.274 L7.733,278.274 C3.477,278.274 0,281.918 0,286.006 L0,326.175 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </svg>
+
+            <svg class="dark-svg" viewBox="0 0 612 344" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g stroke="none" stroke-width="1">
+                    <g fill-rule="nonzero" fill="#000000">
+                        <path d="M604.267,55.727 C608.524,55.727 612,52.083 612,47.994 L612,7.825 C612,3.569 608.717,0.092 604.267,0.092 L7.733,0.092 C3.477,0.092 0,3.736 0,7.825 L0,47.994 C0,52.25 3.283,55.727 7.733,55.727 L604.267,55.727 L604.267,55.727 Z" id="Shape"></path>
+                            <path d="M0,187.084 C0,191.34 3.283,194.817 7.733,194.817 L604.266,194.817 C608.522,194.817 611.999,191.172 611.999,187.084 L611.999,146.915 C611.999,142.631 608.716,139.182 604.266,139.182 L7.733,139.182 C3.477,139.182 0,142.827 0,146.915 L0,187.084 Z" id="Shape"></path>
+                            <path d="M0,326.175 C0,330.431 3.283,333.908 7.733,333.908 L604.266,333.908 C608.522,333.908 611.999,330.263 611.999,326.175 L611.999,286.006 C611.999,281.75 608.716,278.274 604.266,278.274 L7.733,278.274 C3.477,278.274 0,281.918 0,286.006 L0,326.175 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </svg>
+  </button>
+  <div class="dropdown-content">
+  <a href="#Home">Home</a>
+  <a href="#Projects">Projects</a>
+  <a href="#Contribution">Contribution</a>
+  <a href="#About">About</a>
+  <a href="#Contact">Contact</a>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
