@@ -8,208 +8,208 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="173.64226mm"
-   height="132.66986mm"
-   viewBox="0 0 173.64226 132.66986"
-   version="1.1"
-   id="svg8"
+   sodipodi:docname="diagrama.svg"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   sodipodi:docname="diagrama.svg">
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 173.64226 132.66986"
+   height="132.66986mm"
+   width="173.64226mm">
   <defs
      id="defs2">
     <rect
-       id="rect66"
-       height="13.984949"
-       width="17.386906"
+       x="9.5250101"
        y="82.323349"
-       x="9.5250101" />
+       width="17.386906"
+       height="13.984949"
+       id="rect66" />
     <rect
-       x="114.60239"
+       id="rect63"
+       height="52.160713"
+       width="83.910706"
        y="83.079353"
-       width="83.910706"
-       height="52.160713"
-       id="rect63" />
+       x="114.60239" />
     <rect
-       id="rect2771"
+       x="118.30655"
+       y="140.22916"
+       width="83.910706"
        height="52.160702"
-       width="83.910706"
-       y="140.22916"
-       x="118.30655" />
+       id="rect2771" />
     <rect
-       id="rect2765"
+       x="118.30655"
+       y="140.22916"
+       width="83.910706"
        height="52.160706"
-       width="83.910706"
-       y="140.22916"
-       x="118.30655" />
+       id="rect2765" />
     <rect
-       id="rect2757"
-       height="46.869209"
-       width="78.619049"
+       x="13.229174"
        y="139.47322"
-       x="13.229174" />
+       width="78.619049"
+       height="46.869209"
+       id="rect2757" />
     <rect
-       id="rect2740"
-       height="52.160713"
-       width="83.910706"
+       x="65.011902"
        y="59.720238"
-       x="65.011902" />
+       width="83.910706"
+       height="52.160713"
+       id="rect2740" />
     <linearGradient
-       osb:paint="solid"
-       id="linearGradient2731">
+       id="linearGradient2731"
+       osb:paint="solid">
       <stop
-         id="stop2729"
+         style="stop-color:#000000;stop-opacity:1;"
          offset="0"
-         style="stop-color:#000000;stop-opacity:1;" />
+         id="stop2729" />
     </linearGradient>
     <linearGradient
-       osb:paint="solid"
-       id="linearGradient2713">
+       id="linearGradient2713"
+       osb:paint="solid">
       <stop
-         id="stop2711"
+         style="stop-color:#1957a5;stop-opacity:1;"
          offset="0"
-         style="stop-color:#1957a5;stop-opacity:1;" />
+         id="stop2711" />
     </linearGradient>
     <linearGradient
-       osb:paint="solid"
-       id="linearGradient2704">
+       id="linearGradient2704"
+       osb:paint="solid">
       <stop
-         id="stop2702"
+         style="stop-color:#1957a5;stop-opacity:1;"
          offset="0"
-         style="stop-color:#1957a5;stop-opacity:1;" />
+         id="stop2702" />
     </linearGradient>
     <marker
-       inkscape:isstock="true"
-       style="overflow:visible"
-       id="Arrow1Lstart"
-       refX="0"
-       refY="0"
+       inkscape:stockid="Arrow1Lstart"
        orient="auto"
-       inkscape:stockid="Arrow1Lstart">
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
       <path
-         transform="matrix(0.8,0,0,0.8,10,0)"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         id="path2407"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
-         id="path2407" />
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,10,0)" />
     </marker>
     <filter
-       id="filter218"
+       style="color-interpolation-filters:sRGB;"
        inkscape:label="Drop Shadow"
-       style="color-interpolation-filters:sRGB;">
+       id="filter218">
       <feFlood
-         id="feFlood208"
-         result="flood"
+         flood-opacity="0.498039"
          flood-color="rgb(0,0,0)"
-         flood-opacity="0.498039" />
+         result="flood"
+         id="feFlood208" />
       <feComposite
-         id="feComposite210"
-         result="composite1"
-         operator="in"
+         in="flood"
          in2="SourceGraphic"
-         in="flood" />
+         operator="in"
+         result="composite1"
+         id="feComposite210" />
       <feGaussianBlur
-         id="feGaussianBlur212"
-         result="blur"
+         in="composite1"
          stdDeviation="3"
-         in="composite1" />
+         result="blur"
+         id="feGaussianBlur212" />
       <feOffset
-         id="feOffset214"
-         result="offset"
+         dx="3"
          dy="3"
-         dx="3" />
+         result="offset"
+         id="feOffset214" />
       <feComposite
-         id="feComposite216"
-         result="composite2"
-         operator="over"
+         in="SourceGraphic"
          in2="offset"
-         in="SourceGraphic" />
+         operator="over"
+         result="composite2"
+         id="feComposite216" />
     </filter>
     <filter
-       id="filter230"
+       style="color-interpolation-filters:sRGB;"
        inkscape:label="Drop Shadow"
-       style="color-interpolation-filters:sRGB;">
+       id="filter230">
       <feFlood
-         id="feFlood220"
-         result="flood"
+         flood-opacity="0.498039"
          flood-color="rgb(0,0,0)"
-         flood-opacity="0.498039" />
+         result="flood"
+         id="feFlood220" />
       <feComposite
-         id="feComposite222"
-         result="composite1"
-         operator="in"
+         in="flood"
          in2="SourceGraphic"
-         in="flood" />
+         operator="in"
+         result="composite1"
+         id="feComposite222" />
       <feGaussianBlur
-         id="feGaussianBlur224"
-         result="blur"
+         in="composite1"
          stdDeviation="3"
-         in="composite1" />
+         result="blur"
+         id="feGaussianBlur224" />
       <feOffset
-         id="feOffset226"
-         result="offset"
+         dx="3"
          dy="3"
-         dx="3" />
+         result="offset"
+         id="feOffset226" />
       <feComposite
-         id="feComposite228"
-         result="composite2"
-         operator="over"
+         in="SourceGraphic"
          in2="offset"
-         in="SourceGraphic" />
+         operator="over"
+         result="composite2"
+         id="feComposite228" />
     </filter>
     <filter
-       id="filter242"
+       style="color-interpolation-filters:sRGB;"
        inkscape:label="Drop Shadow"
-       style="color-interpolation-filters:sRGB;">
+       id="filter242">
       <feFlood
-         id="feFlood232"
-         result="flood"
+         flood-opacity="0.498039"
          flood-color="rgb(0,0,0)"
-         flood-opacity="0.498039" />
+         result="flood"
+         id="feFlood232" />
       <feComposite
-         id="feComposite234"
-         result="composite1"
-         operator="in"
+         in="flood"
          in2="SourceGraphic"
-         in="flood" />
+         operator="in"
+         result="composite1"
+         id="feComposite234" />
       <feGaussianBlur
-         id="feGaussianBlur236"
-         result="blur"
+         in="composite1"
          stdDeviation="3"
-         in="composite1" />
+         result="blur"
+         id="feGaussianBlur236" />
       <feOffset
-         id="feOffset238"
-         result="offset"
+         dx="3"
          dy="3"
-         dx="3" />
+         result="offset"
+         id="feOffset238" />
       <feComposite
-         id="feComposite240"
-         result="composite2"
-         operator="over"
+         in="SourceGraphic"
          in2="offset"
-         in="SourceGraphic" />
+         operator="over"
+         result="composite2"
+         id="feComposite240" />
     </filter>
   </defs>
   <sodipodi:namedview
-     inkscape:snap-grids="false"
-     inkscape:snap-to-guides="false"
-     inkscape:snap-text-baseline="false"
-     inkscape:window-maximized="1"
-     inkscape:window-y="-11"
-     inkscape:window-x="-11"
-     inkscape:window-height="1047"
-     inkscape:window-width="1920"
-     showgrid="false"
-     inkscape:document-rotation="0"
-     inkscape:current-layer="layer1"
-     inkscape:document-units="mm"
-     inkscape:cy="550.28585"
-     inkscape:cx="-107.42859"
-     inkscape:zoom="0.35"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     borderopacity="1.0"
-     bordercolor="#666666"
+     id="base"
      pagecolor="#ffffff"
-     id="base" />
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="424.78954"
+     inkscape:cy="390.02286"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1898"
+     inkscape:window-height="969"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:snap-text-baseline="false"
+     inkscape:snap-to-guides="false"
+     inkscape:snap-grids="false" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -223,64 +223,67 @@
     </rdf:RDF>
   </metadata>
   <g
-     style="display:inline"
-     id="layer1"
-     inkscape:groupmode="layer"
+     transform="translate(-17.462505,-2.5702024)"
      inkscape:label="Layer 1"
-     transform="translate(-17.462505,-2.5702024)">
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
     <rect
-       y="9.2036953"
-       x="65.605324"
-       height="46.944641"
-       width="75.519638"
+       style="fill:#1957a5;fill-opacity:1;fill-rule:evenodd;stroke-width:1.4985;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter218)"
        id="rect1582"
-       style="fill:#1957a5;fill-opacity:1;fill-rule:evenodd;stroke-width:1.4985;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter218)" />
-    <rect
-       style="fill:#1957a5;fill-opacity:1;fill-rule:evenodd;stroke-width:1.4985;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter230)"
-       id="rect1582-4"
        width="75.519638"
        height="46.944641"
+       x="65.605324"
+       y="9.2036953" />
+    <rect
+       y="80.981529"
        x="26.144619"
-       y="80.981529" />
-    <rect
-       style="fill:#1957a5;fill-opacity:1;fill-rule:evenodd;stroke-width:1.4985;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter242)"
-       id="rect1582-47"
-       width="75.519638"
        height="46.944641"
+       width="75.519638"
+       id="rect1582-4"
+       style="fill:#1957a5;fill-opacity:1;fill-rule:evenodd;stroke-width:1.4985;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter230)" />
+    <rect
+       y="81.661934"
        x="106.90302"
-       y="81.661934" />
+       height="46.944641"
+       width="75.519638"
+       id="rect1582-47"
+       style="fill:#1957a5;fill-opacity:1;fill-rule:evenodd;stroke-width:1.4985;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter242)" />
     <path
-       transform="matrix(-0.01514083,-0.66247652,0.66719774,-0.0150337,117.71227,186.21295)"
-       inkscape:transform-center-y="1.1168096"
-       inkscape:transform-center-x="3.6586931"
-       d="m 98.750721,69.502152 2.043749,-88.114481 2.04375,-88.114481 75.28751,45.827184 75.2875,45.827178 -77.33126,42.287301 z"
-       inkscape:randomized="0"
-       inkscape:rounded="0"
-       inkscape:flatsided="false"
-       sodipodi:arg2="3.1647828"
-       sodipodi:arg1="2.1175852"
-       sodipodi:r2="50.8866"
-       sodipodi:r1="101.7732"
-       sodipodi:cy="-17.432367"
-       sodipodi:cx="151.66739"
-       sodipodi:sides="3"
-       id="path2698"
+       sodipodi:type="star"
        style="fill:none;fill-opacity:1;stroke:#1957a5;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       sodipodi:type="star" />
+       id="path2698"
+       sodipodi:sides="3"
+       sodipodi:cx="151.66739"
+       sodipodi:cy="-17.432367"
+       sodipodi:r1="101.7732"
+       sodipodi:r2="50.8866"
+       sodipodi:arg1="2.1175852"
+       sodipodi:arg2="3.1647828"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 98.750721,69.502152 2.043749,-88.114481 2.04375,-88.114481 75.28751,45.827184 75.2875,45.827178 -77.33126,42.287301 z"
+       inkscape:transform-center-x="3.6586931"
+       inkscape:transform-center-y="1.1168096"
+       transform="matrix(-0.01514083,-0.66247652,0.66719774,-0.0150337,117.71227,186.21295)" />
     <text
-       transform="matrix(0.9,0,0,0.9,10.020149,-32.298079)"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect2740);fill:#ffffff;fill-opacity:1;stroke:none;"
+       xml:space="preserve"
        id="text2738"
-       xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect2740);fill:#ffffff;fill-opacity:1;stroke:none;"
+       transform="matrix(0.9,0,0,0.9,10.549316,-38.648083)"><tspan
          x="65.011719"
          y="69.376168"><tspan> Business and </tspan></tspan><tspan
          x="65.011719"
-         y="82.605294"><tspan>social sciences</tspan></tspan></text>
+         y="82.605294"><tspan>social sciences
+</tspan></tspan><tspan
+         x="65.011719"
+         y="95.83442"><tspan>     expertise</tspan></tspan></text>
     <text
-       transform="matrix(0.9,0,0,0.9,20.165032,-38.496891)"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect2757);fill:#ffffff;fill-opacity:1;stroke:none;"
+       xml:space="preserve"
        id="text2755"
-       xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect2757);fill:#ffffff;fill-opacity:1;stroke:none;"
+       transform="matrix(0.9,0,0,0.9,20.694199,-38.496891)"><tspan
          x="13.228516"
          y="149.12812"><tspan>Econometrics
 </tspan></tspan><tspan
@@ -290,15 +293,15 @@
          x="13.228516"
          y="175.58637"><tspan>     learning</tspan></tspan></text>
     <text
-       transform="matrix(0.9,0,0,0.9,10.428364,6.8905134)"
-       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect2765);fill:#000000;fill-opacity:1;stroke:none;"
-       id="text2763"
-       xml:space="preserve" />
-    <text
        xml:space="preserve"
-       id="text61"
+       id="text2763"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect2765);fill:#000000;fill-opacity:1;stroke:none;"
+       transform="matrix(0.9,0,0,0.9,10.428364,6.8905134)" />
+    <text
+       transform="matrix(0.9,0,0,0.9,11.962947,12.809621)"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect63);fill:#ffffff;fill-opacity:1;stroke:none;"
-       transform="matrix(0.9,0,0,0.9,10.904613,12.809621)"><tspan
+       id="text61"
+       xml:space="preserve"><tspan
          x="114.60156"
          y="92.735543"><tspan>Electrical and
 </tspan></tspan><tspan
@@ -308,9 +311,9 @@
          x="114.60156"
          y="119.1938"><tspan>  engineering</tspan></tspan></text>
     <text
-       transform="matrix(0.9,0,0,0.9,10.428364,6.8905134)"
-       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect66);fill:#000000;fill-opacity:1;stroke:none;"
+       xml:space="preserve"
        id="text64"
-       xml:space="preserve" />
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect66);fill:#000000;fill-opacity:1;stroke:none;"
+       transform="matrix(0.9,0,0,0.9,10.428364,6.8905134)" />
   </g>
 </svg>
