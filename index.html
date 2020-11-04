@@ -63,7 +63,9 @@ svg {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #aa0000}
+/*.dropdown-content a:hover {background-color: #aa0000}*/
+.dropdown-content a:hover {background-color: #004880}
+
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -129,7 +131,7 @@ h1 {
 h2 {
     font-weight: 900;
     font-size: 2em;
-    color: #aa0000;
+    color: #004880;
     padding: 0px 10px;
 }
 
@@ -161,6 +163,9 @@ a[role="button"] {
     display: inline-block;
 }
 
+.graytext {
+   color: #444444;
+}
 
 .highlight {
     background: rgba(217, 55, 10, 0.3);
@@ -194,7 +199,7 @@ smalltext {
 .topnav {
   overflow: hidden;
 /*  background-color: #850000; */
-  background-color: #000000;
+  background-color: #004880;
 }
 
 /* Navbar links */
@@ -209,7 +214,7 @@ smalltext {
 
 /* Links - change color on hover */
 .topnav a:hover {
-  background-color: #aa0000;
+  background-color: #000000;
   color: #eee;
 }
 
@@ -449,7 +454,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="header">
  <br>
-  <h1 style="margin: 0 0px;" >Rafael Becerril Arreola</h1> 
+  <h1 style="margin: 0 0px; text-shadow: 2px 2px 2px #aaaaaa;" >Rafael Becerril Arreola</h1> 
   <div id="rotate"> <div>Marketing Scientist</div> <div>Analytics Educator</div> <div>Quant and Computer Engineer</div>  </div> 
  <!-- Uncovering the economic effects of socioeconomic and technological change
   with advance data analytics -->
@@ -474,7 +479,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
    <div class="columnFlex" >
-   <p style="text-align: center;">
+   <p class="graytext" style="text-align: center;">
    My current position is Assistant Professor of Marketing at the University of South Carolina.</p>
    <!-- <p class="highlight"> -->
    <p style="font-weight:bold; color: #aa0000; text-align: center; background: #ffffff;  border-radius: 5px;">
@@ -482,16 +487,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      answer challenging and socially-relevant research questions about consumer markets.
    </p>
 	
-	<p style="text-align: center;">
+	<p class="graytext" style="text-align: center;">
 	My research focuses on the effects of socieconomic processes and digital technologies on consumer markets,
 	and contributes to the marketing, operations, and economics disciplines.
 	</p>
 	
-	<p style="text-align: center;">
+	<p class="graytext" style="text-align: center;">
 	Retailing, services, consumer packaged goods, and durable goods
 	provide the context for my work.  
 	</p>
-	    <table style="width:100%; padding:0 0 0 0px">
+	    <table class="graytext" style="width:100%; padding:0 0 0 0px">
   		<tr> 
   		   	<td style="vertical-align:top; text-align:right; font-style: italic;">UCLA Ph.D.</td>
     		<td>Quantitative Marketing and Economics</td>
@@ -505,10 +510,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</table>
   </div>
 
-  	
-  <div class="columnThinR">
-    <p style="text-align:center; margin: 5px 0px 0px 0px;">I cultivate the three pillars of data science:</p>
-    <img src="diagrama.svg" alt="The three pilars of data science" width="100%" style="margin: 10px 0px 0px 0px;">
+  <div class="columnThinR">	
+  	<div style="border: 1px solid; padding: 1px;  box-shadow: 2px 5px 5px #888888">
+    	<p style="text-align:center; margin: 15px 0px 9px 0px;">I cultivate the three pillars of data science:</p>
+    	<img src="diagrama.svg" alt="The three pilars of data science" width="100%" style="margin: 10px 0px 15px 0px;">
+    	
+    </div>
   </div>
 </div>  
 <br><br><br><br><br><br><br><br><br><br>
@@ -619,7 +626,7 @@ for (i = 0; i < acc.length; i++) {
 }
 </script>
 
-<BR CLEAR=Â”leftÂ” /> 
+<BR CLEAR=”left” /> 
 <div style="width:95%; left:20px; position:relative">
 <p style="font-weight: bold">Working papers and preprints available from:</p>
  <table style="width:100%;">
@@ -648,7 +655,7 @@ for (i = 0; i < acc.length; i++) {
 
 
 <!-- <img src="jc penny 2.gif" alt="Lights" width="95%" style="margin: 0px 20px 10px 20px; display: inline-block"> -->
-<BR CLEAR=Â”leftÂ” /> 
+<BR CLEAR=”left” /> 
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 
@@ -657,33 +664,33 @@ for (i = 0; i < acc.length; i++) {
 <div class="row">
   <div class="columnThird">
     <h3>Research</h3>
-    <p>I work on projects that are relevant to businesses, consumer welfare, and policy makers.
+    <p class="graytext" >I work on projects that are relevant to businesses, consumer welfare, and policy makers.
     In particular, my projects lay foundations for the evaluation of 
     managerial decisions, consumer decisions, and public policies.</p>
     
-    <p>My hope is to generate new knowledge to support the improvement of 
+    <p class="graytext" >My aim is to generate new knowledge to support the improvement of 
     both consumer welfare and businesses profitability. </p>
    </div>
   
   <div class="columnThird">
     <h3>Teaching</h3>
-    <p>I teach courses on data analytics and data science, 
+    <p class="graytext" >I teach courses on data analytics and data science, 
     emphasizing industry's best practices and a think-first-then-do approach.</p> 
         <blockquote><i>"Every battle is won before it is ever fought (Sun Tzu)."</i></blockquote>
-    <p>With a solid understanding of data and methods, my students learn to 
-    pursue competitive advantage while identifying potential biases and 
+    <p class="graytext" >With a solid understanding of data and methods, my students learn to 
+    pursue long-term competitive advantage while identifying potential biases and 
     detrimental byproducts of data-based solutions.
     </p>
   </div>
   
   <div class="columnThird">
     <h3>Service</h3>
-    <p>Involvement in multiple committees have allowed me to contribute to my 
+    <p class="graytext" >Involvement in multiple committees have allowed me to contribute to my 
     workplace at multiple levels. 
     Mostly, I serve in initiatives related to data analytics and computing.
     </p>
     
-    <p>
+    <p class="graytext" >
     More broadly, I serve as a reviewer for multiple journals in Marketing, 
     Operations, Information Systems, 
     Transportation, and Computer Science. </p>
@@ -700,7 +707,7 @@ for (i = 0; i < acc.length; i++) {
 <div class="row">
 
   <div class="columnThird">
-	<p>
+	<p class="graytext" >
 	My keen interest in mathematics and computers led me through years of solid 
 	training in electrical and computer engineering and automatic control. 
 	At the same time, I discovered the beauty of the social sciences and became 
@@ -710,30 +717,30 @@ for (i = 0; i < acc.length; i++) {
 	Yet the learning process never ends.
 	</p>
 	
-	<p>
+	<p class="graytext" >
 	My CV is available <a href="https://rbecerril.github.io/CV">here</a>.
 	</p>
   </div>
 
   <div class="columnThird">
-  <p>Understanding human behavior fascinates me, and I enjoy reading about history, psychology, 
+  <p class="graytext" >Understanding human behavior fascinates me, and I enjoy reading about history, psychology, 
    sociology, business, technology, and specially anything that puts them together. </p>
    
-  <p> Some books I appreciate: <p>
+  <p class="graytext" > Some books I appreciate: <p>
   <ul>
-  <li>Weapons of Math Destruction, by Cathy O'Neil</li>
+  <li class="graytext" >Weapons of Math Destruction, by Cathy O'Neil</li>
  <!-- <li>HBR Guide to Data Analytics Basics for Managers</li> -->
-  <li>Virtual Competition, by Ariel Ezrachi</li>
-  <li>Troublemakers, by Leslie Berlin</li>  
-  <li>Spent, by Geoffery Miller</li>  
-  <li>Darwin, Sex, and Status, by Jerome H. Barkow</li>  
+  <li class="graytext" >Virtual Competition, by Ariel Ezrachi</li>
+  <li class="graytext" >Troublemakers, by Leslie Berlin</li>  
+  <li class="graytext" >Spent, by Geoffery Miller</li>  
+  <li class="graytext" >Darwin, Sex, and Status, by Jerome H. Barkow</li>  
   </ul>
   </div>
   
   <div class="columnThird">
-  <p> Where do I come from? </p>
+  <p class="graytext" > Where do I come from? </p>
   <img src="places.png" alt="I've lived in..." width="100%" ALIGN="left" style="margin: 0px 0px 0px 0px;">
-  <p> Well, it is not that simple... </p>
+  <p class="graytext" > Well, it is not that simple... </p>
   </div>
 </div>  
 
