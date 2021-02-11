@@ -9,6 +9,10 @@
 
 <style>
 
+.capri {
+	color: #4D926F;
+}
+
 svg {
     position: absolute;
     top: 0;
@@ -46,7 +50,7 @@ svg {
   position: fixed;
   right: 40px;
   top: 60px;
-  background-color: #000000;
+  background-color: #34495e;
   min-width: 160px;
   box-shadow: 0px 16px 32px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
@@ -124,14 +128,14 @@ body {
 h1 {
     font-weight: 900;
     /*font-size: 2.5em;*/
-    color: #000000;
+    color: #ffffff;
     font-size:4vw;
 }
 
 h2 {
     font-weight: 900;
     font-size: 2em;
-    color: #004880;
+    color: #34495e;
     padding: 0px 10px;
 }
 
@@ -186,12 +190,10 @@ smalltext {
     background-size: cover;
     margin: 0;
     min-height: 80px; 
-    max-width: 90%;
-        
+    max-width: 100%;
 	text-align: center;
-	background: #FFFFFF;
-/*    background: #34495e;
-    background: -webkit-linear-gradient(to bottom, #34495e, #34495e, #566b7f 90%);
+    background: #34495e;
+    /* background: -webkit-linear-gradient(to bottom, #34495e, #34495e, #566b7f 90%);
     background: linear-gradient(to bottom, #34495e,  #34495e, #566b7f  90%); */
 }
 
@@ -200,14 +202,14 @@ smalltext {
   overflow: hidden;
 /*  background-color: #850000; */
   /*background-color: #004880;*/
-  background-color: #efefef;
+  background-color: #34495e;
 }
 
 /* Navbar links */
 .topnav a {
   float: left;
   display: block;
-  color: #004880;
+  color: #ffffff; /* 004880; */
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -215,7 +217,7 @@ smalltext {
 
 /* Links - change color on hover */
 .topnav a:hover {
-  background-color: #004880;
+  background-color: #000000;
   color: #eee;
 }
 
@@ -455,8 +457,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="header">
  <br>
-  <h1 style="margin: 0 0px; text-shadow: 2px 2px 2px #aaaaaa;" >Rafael Becerril Arreola</h1> 
-  <div id="rotate"> <div>Marketing Scientist</div> <div>Analytics Educator</div> <div>Quant and Computer Engineer</div>  </div> 
+  <h1 style="margin: 0 0px;  margin-right: 10%; text-shadow: 2px 2px 2px #666666;" >Rafael Becerril Arreola</h1> 
+  <div id="rotate" style="color: #ffffff; margin-right: 10%;"> 
+  <div>Marketing Scientist</div> <div>Analytics Educator</div> <div>Quant and Computer Engineer</div>  </div> 
  <!-- Uncovering the economic effects of socioeconomic and technological change
   with advance data analytics -->
 </div>
@@ -514,11 +517,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="columnThinR" style="padding-top: 20px;">	
   
-  	<div style="border: 1px solid; padding: 1px;  box-shadow: 2px 5px 5px #888888">
-    	<p style="text-align:center; margin: 5px 5px 5px 5px; max-width: 155px; ">I cultivate the three  pillars of data science:</p>
-    	<img src="diagrama.svg" alt="The three pilars of data science" width="100%" style="margin: 10px 0px 5px 0px;">
-    	
-    </div>
+
   </div>
 </div>  
 <br><br><br><br><br><br><br><br><br><br>
@@ -532,7 +531,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--<section style="max-width:600px"> -->
 <a name="Projects"><h2>Research</h2></a>
 
-<button class="accordion">Social stratification and consumer markets</button>
+<button class="accordion">Social stratification, income inequality, and consumer markets</button>
 <div class="panel">
 <img src="new_improved_286.png" alt="Lights" width="200" ALIGN="left" style="margin: 20px 10px 0px 0px;">
 <p dir="ltr" style="text-align: left;" role="presentation"> 
@@ -560,7 +559,7 @@ In a second project, my coauthors and I investigate the welfare effects of produ
 </div>
 
 
-<button class="accordion">Stratification, social rank, and consumption</button>
+<button class="accordion">Social rank, wealth signaling, and consumption</button>
 <div class="panel">
 <img src="lambo_rolex_smaller286.png" alt="Lights" width="200" ALIGN="left" style="margin: 20px 10px 0px 0px;">
 <p dir="ltr" style="text-align: left;" role="presentation"> 
@@ -741,10 +740,20 @@ for (i = 0; i < acc.length; i++) {
   </ul>
   </div>
   
+ 
   <div class="columnThird">
+  <!--
   <p class="graytext" > Where do I come from? </p>
   <img src="places.png" alt="I've lived in..." width="100%" ALIGN="left" style="margin: 0px 0px 0px 0px;">
   <p class="graytext" > Well, it is not that simple... </p>
+ -->
+ 
+    <div style="border: 1px solid; margin-top: 25px; padding: 1px;  box-shadow: 2px 5px 5px #888888; max-width: 200px;">
+    <p style="text-align:center; margin: 5px 5px 5px 5px; max-width: 155px; ">I cultivate the three  pillars of data science:</p>
+    <img src="diagrama.svg" alt="The three pilars of data science" width="100%" style="margin: 10px 0px 5px 0px;">
+    	
+    </div>
+  
   </div>
 </div>  
 
