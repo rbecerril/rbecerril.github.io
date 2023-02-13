@@ -117,8 +117,8 @@ body {
 }
 
 .responsive_pic {
-/*  width: 25%; */
-  max-width: 175px;
+  width: 5%; 
+  max-width: 155px;
   height: auto;
 }
 
@@ -241,13 +241,13 @@ smalltext {
 }
 
 .columnFlex {
-/*  max-width: 400px;	*/
-  margin: 0 100px;
+/* The margin makes sure that the .middle won't be "line-wrapped" below .left and .right, in case the container isn't large enough */
+  margin: 0 400px;
   padding-top: 0px; 
   padding-bottom: 0px; 
 /*  max-width: 80%; */
-/*  padding-left: 25px; */
-/*  padding-right: 25px; */
+  /*padding-left: 25px; 
+  padding-right: 25px; */
 }
 
 .columnThird {
@@ -257,11 +257,11 @@ smalltext {
 }
 
 /* Clear floats after the columns */
-.row:after {
+/*.row:after {
   content: "";
   display: table;
   clear: both;
-}
+}*/
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
 @media screen and (max-width: 600px) {
@@ -269,11 +269,14 @@ smalltext {
     width: 100%;
   }
   .columnThinR {
-	width: 100%;
+	width: 80%;
   }
   .columnThinL{
-	width: 100%;	  
+	width: 80%;	  
   }
+/*  .columnFlex{
+	width: 80%;	  
+  }*/
 }
 
 
@@ -294,7 +297,7 @@ smalltext {
   color: #444;
   cursor: pointer;
   padding: 18px;
-  width: 95%;
+  width: 90%;
   border: none;
   text-align: left;
   outline: none;
@@ -374,11 +377,11 @@ input[type=submit]:hover {
 }
 
 /* Clear floats after the columns */
-.row:after {
+/*.row:after {
   content: "";
   display: table;
   clear: both;
-}
+}*/
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
@@ -403,7 +406,7 @@ input[type=submit]:hover {
             var defaults = {
                 fadeSpeed: 1000,
                 pauseSpeed: 100,
-				child:null
+		child:null
             };
              
             var options = $.extend(defaults, options);
@@ -511,10 +514,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</div>
 	<br>
 	<br>
-   	<!-- <p class="highlight"> -->
-	<!--   <p style="color: #000000; text-align: center; background: #ffffff;  border-radius: 5px;">
-     	He combines advanced data analysis and computer engineering tools with theories from marketing, operations, economics, and psychology to study consumer markets.
-   	</p> -->
+
 	
 	<div class="graytext" style="text-align: center;" >
 	He investigates the overall and disparate effects of socioeconomic factors (e.g., income inequality, socioeconomic status) and technology 
@@ -525,10 +525,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	   
 	<div class="graytext" style="text-align: center;" >
 	His goal is to design economically-sustainable business policies that balance business profitability, social welfare, and fairness.
-	<!--		work pays special attention to pricing, product line, assortment, and delivery decisions in
-	both brick-and-mortar and online retailing. -->
 	</div>
-		
+
+ 		
 <!--
 	    <table class="graytext" style="width:100%; padding:0 0 0 0px">
   		<tr> 
@@ -545,9 +544,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="columnThinR">	
-	<figure>
+<!--	<figure>
 	  <img src="Rafael Becerril.gif" alt="Portrait" style="margin: 30px 10px 10px 20px; width: 120px;" class="responsive_pic">
-	</figure>
+	</figure> -->
   </div>
 </div>  
 <br><br><br><br><br><br><br><br><br><br>
