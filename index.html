@@ -172,6 +172,11 @@ a[role="button"] {
    font-size: 1.25vw;
 }
 
+.rotatortext {
+   font-size: 2vw; 
+   color: #b00000; 
+}
+
 .highlight {
     background: rgba(217, 55, 10, 0.3);
     padding: 0px 5px;
@@ -268,52 +273,6 @@ smalltext {
 }*/
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
-@media screen and (max-width: 1200px) {
-  .graytext {
-    font-size: 14px;
-    line-height: 21px;
-  }	
-  p {
-    font-size: 14px;
-    line-height: 21px;
-  }	
-  a {
-    font-size: 14px;
-  }
-	
-  .columnThinL {
-  	float: center;	
-  }
-  .columnThinR {
-  	float: center;	
-  }	
-  .columnFlex {
-  margin: 0 20px;
-  }
-  .columnThird {
-    width: 100%;
-    float: center;
-  }
-  .columnThinR {
-	width: 100%;
-  }
-  .columnThinL{
-	width: 100%;	  
-  }
-/*  .columnFlex{
-	width: 80%;	  
-  }*/
-	
-  .accordion {
-  	font-size: 14px;
-  }
-
-  .accordion:after {
-  	font-size: 14px;	
-  }
-	
-}
-
 
 /* Style the footer */
 .footer {
@@ -419,7 +378,47 @@ input[type=submit]:hover {
   clear: both;
 }*/
 
-
+@media screen and (max-width: 1200px) {
+  .graytext {
+    font-size: 14px;
+    line-height: 21px;
+  }	
+  p {
+    font-size: 14px;
+    line-height: 21px;
+  }	
+  a {
+    font-size: 14px;
+  }
+	
+  .columnThinL {
+  	float: center;	
+  }
+  .columnThinR {
+  	float: center;	
+  }	
+  .columnFlex {
+  margin: 0 20px;
+  }
+  .columnThird {
+    width: 100%;
+    float: center;
+  }
+  .columnThinR {
+	width: 100%;
+  }
+  .columnThinL{
+	width: 100%;	  
+  }
+	
+  .accordion {
+  	font-size: 14px;
+  }
+  .accordion:after {
+  	font-size: 14px;	
+  }
+	
+}
 
 
 </style>
@@ -536,7 +535,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    	<br>
       	<br>
 
-	<div id="rotate" style="font-weight:bold; font-size: 2vw; color: #b00000; text-align: center;"> 
+	<div id="rotate" class="rotatortext" style="font-weight:bold; text-align: center;"> 
 	  <div>Quantitative Marketer and Operations Researcher</div> 
 	  <div>Computer Engineer</div>  
 	  <div>Data Analytics Educator</div>
@@ -564,9 +563,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
 </div>  
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
+	
+	
+<!-- add responsive space -->
+<pre style="font-size:3vw">
+<br> <br> <br> <br> <br> <br> <br> <br>
+</pre>
 
 
 
