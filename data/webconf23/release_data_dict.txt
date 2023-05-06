@@ -1,0 +1,72 @@
+===============================================================================
+
+DATA DICTIONARY FOR FILE "PRICE_ZIP_DATA.CSV"
+
+By Rafael Becerril Arreola
+
+02-95-2023
+
+===============================================================================
+
+The dataset price_zip_data.csv is released as companion to the paper "A Method to
+Assess and Explain Disparate Impact in Online Retailing", presented at the
+2023 WebConf in Austin, TX. 
+
+The paper describes the data collection process and the features of the main 
+dataset. The variables included are as follows.
+
+zipcode:  	  zip code where the product is to be delievered/shipped/picked up
+CBSA.TITLE: 	Core base statistical area of the zip code
+upc_recoded: 	numeric code for the UPC
+price:		    list price (before taxes) as displayed on website
+time:		      time the data point was collected
+PROPWHITE:	  proportion of white households in zip code
+PROPBLACK:	  proportion of black households in zip code
+PROPNATIVE:	  proportion of native households in zip code
+PROPASIAN:	  proportion of asian households in zip code
+PROPHISP:	    proportion of hispanic households in zip code
+AVGINC:		    average household income in zip code (in millions)
+
+
+To protect the identity of the retailer the data was collected from, UPC's 
+corresponding to private labels have been removed. As a result, the number of 
+observations in the data set is 528,111 but reduces to 527,523 observations 
+after pairing as described in the paper. In addition, the UPC's have been 
+recoded also to protect the identity of the retailer. 
+
+The results with the reduced sample are qualitatively the same as those 
+reported in the paper. 
+With the reduce sample, the main regression table for the reduced dataset 
+is as follows.
+
+============================================================================================================
+                                                  Dependent variable:                                       
+           -------------------------------------------------------------------------------------------------
+                                              Price difference                                                              
+             None    By product averaged By product,zip code averaged By product,zip code and time (w/i 60s)
+              (1)            (2)                     (3)                               (4)                  
+------------------------------------------------------------------------------------------------------------
+AVGINC       1.866        0.357***                 0.038**                            0.030*                
+            (1.277)        (0.073)                 (0.015)                           (0.016)                
+                                                                                                            
+PROPBLACK  -0.495***      0.099***                  -0.011                            -0.011                
+            (0.171)        (0.019)                 (0.008)                           (0.008)                
+                                                                                                            
+PROPHISP     0.210        0.125***                 0.021**                           0.015**                
+            (0.319)        (0.017)                 (0.008)                           (0.008)                
+                                                                                                            
+PROPASIAN    0.476        0.599***                 0.044***                          0.053***               
+            (0.409)        (0.034)                 (0.014)                           (0.015)                
+                                                                                                            
+PROPNATIVE   1.063          0.022                  0.063***                           0.041*                
+            (0.663)        (0.034)                 (0.024)                           (0.024)                
+                                                                                                            
+Constant   6.585***        0.0003                  0.003***                          0.001***               
+            (0.160)        (0.001)                 (0.001)                           (0.0005)               
+--------------------------------------------------------------------------------------------------------------
+Observations  527,523        527,523                 527,523                           527,523                
+R2            0.0002          0.010                   0.0001                            0.0001                
+Adjusted R2   0.0002          0.010                  0.00005                            0.0001                
+==============================================================================================================
+Note:                                                                              *p<0.1; **p<0.05; ***p<0.01
+
