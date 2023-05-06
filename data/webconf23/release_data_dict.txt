@@ -15,17 +15,17 @@ Assess and Explain Disparate Impact in Online Retailing", presented at the
 The paper describes the data collection process and the features of the main 
 dataset. The variables included are as follows.
 
-zipcode:  	  zip code where the product is to be delievered/shipped/picked up
+zipcode:  	zip code where the product is to be delievered/shipped/picked up
 CBSA.TITLE: 	Core base statistical area of the zip code
 upc_recoded: 	numeric code for the UPC
-price:		    list price (before taxes) as displayed on website
-time:		      time the data point was collected
-PROPWHITE:	  proportion of white households in zip code
-PROPBLACK:	  proportion of black households in zip code
-PROPNATIVE:	  proportion of native households in zip code
-PROPASIAN:	  proportion of asian households in zip code
-PROPHISP:	    proportion of hispanic households in zip code
-AVGINC:		    average household income in zip code (in millions)
+price:		list price (before taxes) as displayed on website
+time:		time the data point was collected
+PROPWHITE:	proportion of white households in zip code
+PROPBLACK:	proportion of black households in zip code
+PROPNATIVE:	proportion of native households in zip code
+PROPASIAN:	proportion of asian households in zip code
+PROPHISP:	proportion of hispanic households in zip code
+AVGINC:		average household income in zip code (in millions)
 
 
 To protect the identity of the retailer the data was collected from, UPC's 
