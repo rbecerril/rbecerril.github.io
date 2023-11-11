@@ -11,12 +11,33 @@
 
   gtag('config', 'G-0X5PEBTDZM', {
     'custom_map': {
-      'dimension1': 'isp',
-      'dimension2': 'org',
-      'dimension3': 'hostname'
+      'ISP': 'isp',
+      'organization': 'org',
+      'IP name': 'hostname'
     }
   });
 </script>
+
+<script>
+  var customDimensions = {};
+  var Http = new XMLHttpRequest();
+  var url = 'https://json.geoiplookup.io/';
+  Http.open("GET", url);
+  Http.send();
+  
+  Http.onreadystatechange = function() {
+    if (this.readyState==4 && this.status==200) {
+      var response = JSON.parse(Http.responseText);
+      customDimensions = { 
+        'isp': response.isp,
+        'org': response.org,
+        'hostname': response.hostname,
+        'non_interaction': true
+      };
+      gtag('event', 'sendCustomDimensions', customDimensions );
+    }
+  }
+</script>	
 	
 <title>Rafael Becerril Arreola, personal website</title>
 <meta charset="utf-8">
