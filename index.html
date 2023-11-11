@@ -9,7 +9,13 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-0X5PEBTDZM');
+  gtag('config', 'G-0X5PEBTDZM', {
+    'custom_map': {
+      'dimension1': 'isp',
+      'dimension2': 'org',
+      'dimension3': 'hostname'
+    }
+  });
 </script>
 	
 <title>Rafael Becerril Arreola, personal website</title>
