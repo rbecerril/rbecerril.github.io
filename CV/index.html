@@ -14,11 +14,32 @@
     'custom_map': {
       'ISP': 'isp',
       'organization': 'org',
-      'IP name': 'hostname'
+      'IP_name': 'hostname'
     }
   });
 </script>
- 
+
+  <script>
+  var customDimensions = {};
+  var Http = new XMLHttpRequest();
+  var url = 'https://json.geoiplookup.io/';
+  Http.open("GET", url);
+  Http.send();
+  
+  Http.onreadystatechange = function() {
+    if (this.readyState==4 && this.status==200) {
+      var response = JSON.parse(Http.responseText);
+      customDimensions = { 
+        'isp': response.isp,
+        'org': response.org,
+        'hostname': response.hostname,
+        'non_interaction': true
+      };
+      gtag('event', 'sendCustomDimensions', customDimensions );
+    }
+  }
+</script>
+  
   
 <!-- open cv on new tab 
 <script type="text/javascript">
@@ -32,21 +53,7 @@
 
 <!-- HTML meta refresh URL redirection --> 
 <meta http-equiv="refresh" content="3; url=https://rbecerril.github.io/CV/rba_cv_tagged.pdf"> 
-
-<!-- this will have to retire soon -->
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WKGG2PC');</script>
-<!-- End Google Tag Manager -->
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKGG2PC"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  
+ 
 </HEAD>
   
 <BODY LANG="en-US" DIR="LTR">
