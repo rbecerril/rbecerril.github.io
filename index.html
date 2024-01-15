@@ -13,7 +13,10 @@
     'custom_map': {
       'ISP': 'isp',
       'organization': 'org',
-      'IP_name': 'hostname'
+      'IP_name': 'hostname',
+      'city by 3rd party': 'city',
+      'district': 'district',
+      'connection_type': 'connection_type'
     }
   });
 </script>
@@ -32,6 +35,9 @@
         'isp': response.isp,
         'org': response.org,
         'hostname': response.hostname,
+        'city': response.city,
+        'district': response.district,
+        'connection_type': response.connection_type,	      
         'non_interaction': true
       };
       gtag('event', 'sendCustomDimensions', customDimensions );
