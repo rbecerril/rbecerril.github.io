@@ -63,7 +63,7 @@
 	// fetch("http://mktg717.42web.io/saveAgent.php", {
   	//	method: "POST",
   	//	body: x  });
-	$.post("http://mktg717.42web.io/saveAgent.php", {data : x});
+	$.post("http://mktg717.42web.io/saveAgent.php", {data : x}, function(){alert("sent UA data")} );
 	    
         //var data = new FormData();
         //data.append("data" , x);
