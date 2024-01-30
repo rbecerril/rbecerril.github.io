@@ -18,7 +18,7 @@
     headers.append('Content-Type', 'application/json');
     //headers.append('Accept', 'application/json');
     headers.append('Origin','https://rbecerril.github.io');
-	headers.append('Authorization', 'Basic ' + base64.encode("guest" + ":" +  "anonymous"));
+	headers.append('Authorization', 'Basic guest:anonymous');
 
 	fetch("https://mktg717.42web.io/saveAgent.php", {
 		mode: 'cors', // added
