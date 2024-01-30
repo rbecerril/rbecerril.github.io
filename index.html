@@ -24,8 +24,9 @@
 		mode: 'no-cors', // added
 		credentials: 'include',
   		method: "POST",
-		headers: headers, //added
-  		body: x  })
+		body: x,
+		headers: headers //added
+  		 })
     .then(response => response.json())
     .then(json => console.log(json))
     .catch(error => console.log('Authorization failed: ' + error.message));
