@@ -13,8 +13,6 @@
             var x = navigator.userAgent + " ; " +  navigator.platform + " ; undefined" ; 
         }        
 
-    let headers = new Headers();
-
 //	fetch("https://mktg717.42web.io/saveAgent.php", {
 //		mode: 'cors', 
 //  		method: "POST",
@@ -23,7 +21,6 @@
 //    .then(json => console.log(json))
 //    .catch(error => console.log('Authorization failed: ' + error.message));
 	    
-
 	var data = new FormData();
         data.append("data" , x);
 	//var obj = JSON.parse(JSON.stringify(data));
