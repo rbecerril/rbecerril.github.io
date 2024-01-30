@@ -20,7 +20,7 @@
     headers.append('Origin','https://rbecerril.github.io');
 
 	fetch("https://mktg717.42web.io/saveAgent.php", {
-		//mode: 'no-cors', // added
+		mode: 'cors', // added
   		method: "POST",
 		headers: headers, //added
   		body: x  })
