@@ -2,7 +2,7 @@
 <HTML lang="en">
 
 <HEAD>
-  
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZH3SZDKLD8"></script>
 <script>
@@ -38,8 +38,8 @@
         'hostname': response.hostname,
         'city': response.city,
         'district': response.district,
-        'connection_type': response.connection_type,
-        'non_interaction': true
+        'connection_type': response.connection_type //,
+        //'non_interaction': true
       };
       gtag('event', 'sendCustomDimensions', customDimensions );
     }
