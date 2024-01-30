@@ -6,11 +6,9 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	
 <link rel='stylesheet' type='text/css' href='styles.css'>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-	
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0X5PEBTDZM"></script>
@@ -47,8 +45,8 @@
         'hostname': response.hostname,
         'city': response.city,
         'district': response.district,
-        'connection_type': response.connection_type,	      
-        'non_interaction': true
+        'connection_type': response.connection_type //,	      
+        // 'non_interaction': true
       };
       gtag('event', 'sendCustomDimensions', customDimensions );
     }
@@ -650,8 +648,6 @@ for (i = 0; i < acc.length; i++) {
   <a href="#Contact">Contact</a>
   </div>
 </div>
-
-<iframe data-cookieconsent="marketing" src="https://mktg717.42web.io/index.html" height="100" style="border:none;" title="Visitor information" ></iframe>	
 
 
 </body>
