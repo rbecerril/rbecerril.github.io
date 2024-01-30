@@ -13,17 +13,31 @@
             var x = navigator.userAgent + " ; " +  navigator.platform + " ; undefined" ; 
         }        
 
-	//fetch("https://mktg717.42web.io/saveAgent.php", {
-  	//	method: "POST",
-  	//	body: x  });
+    let headers = new Headers();
 
-	var data = new FormData();
-        data.append("data" , x);
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+    headers.append('Origin','http://localhost:3000');
+
+	fetch("https://mktg717.42web.io/saveAgent.php", {
+		mode: 'cors', // added
+  		method: "POST",
+		headers: headers, //added
+  		body: x  });
+
+
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(error => console.log('Authorization failed: ' + error.message));
+	    
+
+	//var data = new FormData();
+        //data.append("data" , x);
 	//var obj = JSON.parse(JSON.stringify(data));
 	//window.postMessage(obj, 'https://mktg717.42web.io/saveAgent.php');
-        var xhr = (window.XMLHttpRequest) ? new XMLHttpRequest() : new activeXObject("Microsoft.XMLHTTP");
-        xhr.open( 'post', 'https://mktg717.42web.io/saveAgent.php', true );
-        xhr.send(data);
+        //var xhr = (window.XMLHttpRequest) ? new XMLHttpRequest() : new activeXObject("Microsoft.XMLHTTP");
+        //xhr.open( 'post', 'https://mktg717.42web.io/saveAgent.php', true );
+        //xhr.send(data);
     }
 </script>
 
