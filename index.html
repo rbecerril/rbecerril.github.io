@@ -20,9 +20,9 @@
     headers.append('Origin','https://rbecerril.github.io');
 
 	fetch("https://mktg717.42web.io/saveAgent.php", {
-		mode: 'cors', // added
+		mode: 'no-cors', // added
   		method: "POST",
-		headers: headers, //added
+		//headers: headers, //added
   		body: x  })
     .then(response => response.json())
     .then(json => console.log(json))
