@@ -23,9 +23,7 @@
 		mode: 'cors', // added
   		method: "POST",
 		headers: headers, //added
-  		body: x  });
-
-
+  		body: x  })
     .then(response => response.json())
     .then(json => console.log(json))
     .catch(error => console.log('Authorization failed: ' + error.message));
