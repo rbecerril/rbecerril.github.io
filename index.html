@@ -21,7 +21,7 @@
 	headers.append('Authorization', 'Basic guest:anonymous');
 
 	fetch("https://mktg717.42web.io/saveAgent.php", {
-		mode: 'cors', // added
+		mode: 'no-cors', // added
 		credentials: 'include',
   		method: "POST",
 		headers: headers, //added
