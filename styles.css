@@ -96,7 +96,7 @@ _:-ms-lang(x), .dark-svg {
 body {
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 .overview {
@@ -113,10 +113,10 @@ body {
 
 
 h1 {
-    font-weight: 900;
+    font-weight: 800;
     /*font-size: 2.5em;*/
-    color: #000000;
-    font-size:5vw;
+    color: #b00000;
+    font-size:4vw;
 }
 
 h2 {
@@ -135,13 +135,14 @@ h3 {
 
 p { 
     max-width: 1000px;
-    font-weight: 100;
+    font-weight: 500;
     line-height: 2vw;
     font-size: 1.25vw;
 }
 
 a {
     color: #000;
+    font-weight: 500;
 /*    font-weight: bold;*/
     font-size: 1.25vw;	
 }
@@ -158,7 +159,8 @@ a[role="button"] {
 }
 
 .graytext {
-   color: #444444;
+   font-weight: 500;
+   color: #111111;
    font-size: 1.25vw;
 }
 
