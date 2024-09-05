@@ -9,7 +9,7 @@ svg {
 /* Style The Dropdown Button */
 .dropbtn {
     padding: 16px;
-    font-size: 16px;
+    font-size: 12px;
     border: none;
     outline: none;
     max-width: 50px;
@@ -117,12 +117,12 @@ h1 {
     /*font-size: 2.5em;*/
     /*color: #b00000; */
     color: #FFFFFF;
-    font-size:4vw;
+    font-size:2.5vw;
 }
 
 h2 {
     font-weight: 900;
-    font-size: 3vw;
+    font-size: 2vw;
     /* color: #34495e; capri */
     color: #b00000;
     padding: 0px 10px;
@@ -130,7 +130,13 @@ h2 {
 
 h3 {
     font-weight: 900;
-    font-size: 2vw;
+    font-size: 1.5vw;
+    color: #000000;
+}
+
+h3 {
+    font-weight: 900;
+    font-size: 1.25vw;
     color: #000000;
 }
 
@@ -138,14 +144,14 @@ p {
     max-width: 1000px;
     font-weight: 500;
     line-height: 2vw;
-    font-size: 1.25vw;
+    font-size: 1vw;
 }
 
 a {
     color: #000;
     font-weight: 500;
 /*    font-weight: bold;*/
-    font-size: 1.25vw;	
+    font-size: 1vw;	
 }
 
 a[role="button"] {
@@ -162,7 +168,8 @@ a[role="button"] {
 .graytext {
    font-weight: 500;
    color: #111111;
-   font-size: 1.25vw;
+   font-size: 1vw;
+   line-height: 1.5;
 }
 
 .rotatortext {
@@ -188,9 +195,10 @@ smalltext {
     padding: 10px 40px;
     background-size: cover;
     margin: 0;
-    min-height: 200px; 
+    min-height: 100px; 
+    max-height: 100px;     
     max-width: 100%;
-	text-align: center;
+    text-align: center;
     /* background: #34495e; */
     background: #ffffff;
     /* background: -webkit-linear-gradient(to bottom, #34495e, #34495e, #566b7f 90%);
@@ -228,13 +236,13 @@ smalltext {
 
 .columnThinL {
   float: left;
-  width: 160px;
+  width: 200px;
   left: 0; 
 }
 
 .columnThinR {
   float: right;	
-  width: 160px;	
+  width: 200px;	
   right: 0;  
 }
 
@@ -279,14 +287,14 @@ smalltext {
 
 .accordion {
   background-color: #eee;
-  color: #444;
+  color: #000;
   cursor: pointer;
-  padding: 2vw;
+  padding: 1vw;
   width: 90%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 1.25vw;
+  font-size: 1vw;
   transition: 0.4s;
   position: relative;
   left: 20px;
