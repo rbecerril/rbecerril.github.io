@@ -276,8 +276,8 @@ smalltext {
 /* Style the footer */
 .footer {
     background: #20123e;
-    background: -webkit-linear-gradient(to bottom, #ffffff, #000000 100%);
-    background: linear-gradient(to bottom, #ffffff, #000000 100%); 
+    background: -webkit-linear-gradient(to bottom, #888888, #888888 100%);
+    background: linear-gradient(to bottom, #888888, #888888 100%); 
 	padding: 10px;
 /*  	text-align: center;*/
 }
