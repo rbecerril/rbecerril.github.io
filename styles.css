@@ -117,7 +117,7 @@ h1 {
     /*font-size: 2.5em;*/
     /*color: #b00000; */
     color: #FFFFFF;
-    font-size:2.5vw;
+    font-size:2vw;
 }
 
 h2 {
@@ -211,7 +211,7 @@ smalltext {
 /*  background-color: #850000; */
   /*background-color: #004880;*/
   /* background-color: #34495e; capri */
-  background-color: #000000;
+  background-color: #555555;
 }
 
 /* Navbar links */
