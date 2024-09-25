@@ -25,41 +25,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-0X5PEBTDZM', {
-    'custom_map': {
-      'ISP': 'isp',
-      'organization': 'org',
-      'IP_name': 'hostname',
-      'city by 3rd party': 'city',
-      'district': 'district',
-      'connection_type': 'connection_type'
-    }
-  });
+  gtag('config', 'G-0X5PEBTDZM');
 </script>
 
-<script>
-  var customDimensions = {};
-  var Http = new XMLHttpRequest();
-  var url = 'https://json.geoiplookup.io/';
-  Http.open("GET", url);
-  Http.send();
-  
-  Http.onreadystatechange = function() {
-    if (this.readyState==4 && this.status==200) {
-      var response = JSON.parse(Http.responseText);
-      customDimensions = { 
-        'isp': response.isp,
-        'org': response.org,
-        'hostname': response.hostname,
-        'city': response.city,
-        'district': response.district,
-        'connection_type': response.connection_type //,	      
-        // 'non_interaction': true
-      };
-      gtag('event', 'sendCustomDimensions', customDimensions );
-    }
-  }
-</script>	
 
 
 	
