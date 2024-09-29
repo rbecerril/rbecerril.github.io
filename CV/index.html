@@ -2,7 +2,16 @@
 <HTML lang="en">
 
 <HEAD>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZH3SZDKLD8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-ZH3SZDKLD8');
+</script>
+  
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -11,48 +20,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WKGG2PC');</script>
 <!-- End Google Tag Manager -->
   
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZH3SZDKLD8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-ZH3SZDKLD8', {
-    'custom_map': {
-      'ISP': 'isp',
-      'organization': 'org',
-      'IP_name': 'hostname',
-      'city by 3rd party': 'city',
-      'district': 'district',
-      'connection_type': 'connection_type'
-    }
-  });
-</script>
-
-<script>
-  var customDimensions = {};
-  var Http = new XMLHttpRequest();
-  var url = 'https://json.geoiplookup.io/';
-  Http.open("GET", url);
-  Http.send();
-  
-  Http.onreadystatechange = function() {
-    if (this.readyState==4 && this.status==200) {
-      var response = JSON.parse(Http.responseText);
-      customDimensions = { 
-        'isp': response.isp,
-        'org': response.org,
-        'hostname': response.hostname,
-        'city': response.city,
-        'district': response.district,
-        'connection_type': response.connection_type //,
-        //'non_interaction': true
-      };
-      gtag('event', 'sendCustomDimensions', customDimensions );
-    }
-  }
-</script>
   
   
 <!-- open cv on new tab 
