@@ -176,7 +176,7 @@ a[role="button"] {
 }
 
 .rotatortext {
-   font-size: 2vw; 
+   font-size: 2.5vw; 
    color: #b00000; 
 }
 
@@ -214,7 +214,7 @@ smalltext {
 /*  background-color: #850000; */
   /*background-color: #004880;*/
   /* background-color: #34495e; capri */
-  background-color: #555555;
+  background-color: #000000;
 }
 
 /* Navbar links */
@@ -239,13 +239,13 @@ smalltext {
 
 .columnThinL {
   float: left;
-  width: 200px;
+  width: 300px;
   left: 0; 
 }
 
 .columnThinR {
   float: right;	
-  width: 200px;	
+  width: 300px;	
   right: 0;  
 }
 
