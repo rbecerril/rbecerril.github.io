@@ -6,10 +6,10 @@ svg {
 }
 
 .grayDiv {
-background-color: #e5e5f7;
-opacity: 0.4;
-background-image: radial-gradient(circle at center center, #f7ca45, #e5e5f7), repeating-radial-gradient(circle at center center, #f7ca45, #f7ca45, 7px, transparent 14px, transparent 7px);
-background-blend-mode: add;
+    background-color: #e5e5f7;
+    opacity: 0.4;
+    background-image: radial-gradient(circle at center center, #c2c2c2, #e5e5f7), repeating-radial-gradient(circle at center center, #c2c2c2, #c2c2c2, 4px, transparent 8px, transparent 4px);
+    background-blend-mode: add;
 }
 
 
