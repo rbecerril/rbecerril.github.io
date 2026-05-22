@@ -157,9 +157,9 @@ p {
 }
 
 l { 
-    max-width: 1000px;
+    max-width: 900px;
     font-weight: 500;
-    line-height: 2vw;
+    line-height: 1.5vw;
     font-size: 1vw;
 }
 
