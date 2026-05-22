@@ -156,6 +156,13 @@ p {
     font-size: 1vw;
 }
 
+l { 
+    max-width: 1000px;
+    font-weight: 500;
+    line-height: 2vw;
+    font-size: 1vw;
+}
+
 a {
     color: #000;
     font-weight: 500;
