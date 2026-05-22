@@ -103,7 +103,7 @@ _:-ms-lang(x), .dark-svg {
 
 body {
     margin: 0;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Inter', serif;
     font-weight: 200;
 }
 
@@ -121,6 +121,7 @@ body {
 
 
 h1 {
+	font-family: 'Roboto Condensed', sans-serif;
     font-weight: 800;
     /*font-size: 2.5em;*/
     /*color: #b00000; */
