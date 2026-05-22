@@ -200,6 +200,7 @@ smalltext {
 }
 
 .header {
+	font-family: 'Roboto Condensed', sans-serif;
     padding: 10px 40px;
     background-size: cover;
     margin: 0;
@@ -215,6 +216,7 @@ smalltext {
 
 /* The navbar container */
 .topnav {
+  font-family: 'Roboto Condensed', sans-serif;
   overflow: hidden;
 /*  background-color: #850000; */
   /*background-color: #004880;*/
@@ -283,7 +285,8 @@ smalltext {
 
 /* Style the footer */
 .footer {
-    background: #20123e;
+    /* background: #20123e; */
+	background: #000000;
     background: -webkit-linear-gradient(to bottom, #888888, #888888 100%);
     background: linear-gradient(to bottom, #888888, #888888 100%); 
 	padding: 10px;
@@ -366,7 +369,7 @@ input[type=submit]:hover {
 /* Style the container/contact section */
 .contactcontainer {
   border-radius: 5px;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   padding: 10px;
   text-align:center;
 }
