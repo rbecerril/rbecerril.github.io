@@ -7,7 +7,7 @@ svg {
 
 .grayDiv {
     background-color: #e5e5f7;
-    opacity: 0.4;
+    opacity: 0.5;
     background-image: radial-gradient(circle at center center, #c2c2c2, #e5e5f7), repeating-radial-gradient(circle at center center, #c2c2c2, #c2c2c2, 4px, transparent 8px, transparent 4px);
     background-blend-mode: add;
 }
