@@ -225,7 +225,7 @@ smalltext {
 /* The navbar container */
 .topnav {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1vw;
+  font-size: 0.75vw;
   overflow: hidden;
 /*  background-color: #850000; */
   /*background-color: #004880;*/
@@ -400,6 +400,7 @@ input[type=submit]:hover {
  align-items: center; 
  grid-template-columns: 1fr 1fr 1fr;
  column-gap: 5px;
+ row-gap: 0px;
 }
 
 
