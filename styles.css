@@ -104,7 +104,8 @@ _:-ms-lang(x), .dark-svg {
 
 body {
     margin: 0;
-    font-family: 'Cormorant', serif;
+    /* font-family: 'Cormorant', serif;*/
+	font-family: 'Roboto Condensed', sans-serif;"
     font-weight: 200;
 	background-color: #F7F4EE;
 }
